@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'tom_observations',
     'tom_dataproducts',
     'custom_code',
+    'tom_alertstreams',
     'tom_fink',
     'tom_setup'
 ]
@@ -113,7 +114,7 @@ DATABASES = {
         'NAME': 'opm',
         'USER': 'opm',
         'PASSWORD': os.getenv('opm_postgres'),
-        'HOST': '127.0.0.1',
+        'HOST': '172.17.0.2',
         'PORT': '5432',
     },
     'sqlite': {

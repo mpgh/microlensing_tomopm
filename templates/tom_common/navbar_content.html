@@ -14,9 +14,6 @@ For customization instructions, see tom_common/base.html
         <a class="dropdown-item" href="{% url 'targets:targetgrouping' %}">Target Grouping</a>
     </div>
 </li>
-<li class="nav-item {% if request.resolver_match.namespace == 'dataproducts' %}active{% endif %}">
-    <a class="nav-link" href="{% url 'tom_dataproducts:list' %}">Data</a>
-</li>
 {% navbar_app_addons %}
 <li class="nav-item {% if 'user' in request.resolver_match.url_name %}active{% endif %}">
     <a class="nav-link" href="{% url 'user-list' %}">Users</a>
