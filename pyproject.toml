@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "microlensing_tomopm,"
+version = "0.0.0"
+description = "Microlensing TOM for TVS"
+authors = ["Markus Hundertmark <markus.hundertmark@uni-heidelberg.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+tomtoolkit = "^2.19.6"
+tom_lt = "^0.4.1"
+tom_alertstreams = "^0.6.3"
+tom_fink = "^0.6.2"
+
+whitenoise = "6.6"
+gunicorn = {extras = ["gevent"], version = "^22.0.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
