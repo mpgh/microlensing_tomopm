@@ -114,7 +114,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'opm',
         'USER': 'opm',
-        'PASSWORD': os.getenv('opm_postgres'),
+        'PASSWORD': os.getenv('OPM_POSTGRES'),
         'HOST': '172.17.0.2',
         'PORT': '5432',
     },
@@ -253,16 +253,28 @@ FACILITIES = {
 # second being the display name.
 # Be careful when removing items, as previously valid types will no
 # longer be valid, and may cause issues unless the offending records are modified.
+
+SINGLE_TARGET_DATA_SERVICES = {
+    'ATLAS': {
+        'class': 'tom_dataproducts.single_target_data_service.atlas.AtlasForcedPhotometryService',
+        'url': "https://fallingstar-data.com/forcedphot",
+        'api_key': os.getenv('ATLAS_FORCED_PHOTOMETRY_API_KEY', 'your atlas account api token')
+    }
+}
+
+
 DATA_PRODUCT_TYPES = {
     'photometry': ('photometry', 'Photometry'),
-    'fits_file': ('fits_file', 'FITS File'),
+    'atlas_photometry': ('atlas_photometry', 'Atlas Photometry'),
+#    'fits_file': ('fits_file', 'FITS File'),
     'spectroscopy': ('spectroscopy', 'Spectroscopy'),
-    'image_file': ('image_file', 'Image File')
+#    'image_file': ('image_file', 'Image File')
 }
 
 DATA_PROCESSORS = {
     'photometry': 'tom_dataproducts.processors.photometry_processor.PhotometryProcessor',
     'spectroscopy': 'tom_dataproducts.processors.spectroscopy_processor.SpectroscopyProcessor',
+    'atlas_photometry': 'tom_dataproducts.processors.atlas_processor.AtlasProcessor',
 }
 
 TOM_FACILITY_CLASSES = [
