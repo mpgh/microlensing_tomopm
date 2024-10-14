@@ -1,3 +1,11 @@
 env/
 microlensing_tomopm/settings.py
 .idea
+poetry.lock
+.vscode/settings.json
+custom_code/__pycache__/
+custom_code/migrations/__pycache__/
+data/ZTF24abeqqfe/none/atlas_2024_09_24-2024_10_14_job1750974.txt
+data/ZTF24abipjoh/none/atlas_2024_09_24-2024_10_14_job1750914.txt
+dist/microlensing_tomopm,-0.0.0.tar.gz
+microlensing_tomopm/__pycache__/
