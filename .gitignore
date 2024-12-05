@@ -9,3 +9,7 @@ data/ZTF24abeqqfe/none/atlas_2024_09_24-2024_10_14_job1750974.txt
 data/ZTF24abipjoh/none/atlas_2024_09_24-2024_10_14_job1750914.txt
 dist/microlensing_tomopm,-0.0.0.tar.gz
 microlensing_tomopm/__pycache__/
+data/ZTF18aaxlmds/none/atlas_2024_11_15-2024_12_05_job1917616.txt
+data/ZTF24abbrcrq/none/atlas_2024_11_15-2024_12_05_job1917614.txt
+custom_code/migrations/0001_initial.py
+custom_code/management/commands/__pycache__/convert_targets.cpython-310.pyc
