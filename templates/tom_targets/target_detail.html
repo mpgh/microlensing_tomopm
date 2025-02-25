@@ -41,7 +41,15 @@
         {{ object.future_observations|length }} upcoming observation{{ object.future_observations|pluralize }}
       </div>
       {% endif %}
-      <a href="https://fink-portal.org/{{ target.name }}">Fink target page</a>
+      <a target="_blank" rel="noopener noreferrer" href="https://fink-portal.org/{{ target.name }}">Fink target page</a>
+      <br>
+      <a target="_blank" rel="noopener noreferrer" href="https://antares.noirlab.edu/loci/lookup/{{ target.name }}">ANTARES target page</a>
+      <br>
+      <a target="_blank" rel="noopener noreferrer" href="https://lasair-ztf.lsst.ac.uk/objects/{{ target.name }}">Lasair target page</a>
+      <br>
+      <a target="_blank" rel="noopener noreferrer" href="https://alerce.online/object/{{ target.name }}">ALeRCE target page</a>
+      <br>
+     
       {% target_unknown_statuses object %}
       {% target_buttons object %}
       {% target_data object %}
@@ -69,14 +77,12 @@
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="observe">
-        <h4>Observe</h4>
-        {% observing_buttons object %}
-        <hr/>
-        {% observationtemplate_run object %}
-        <hr/>
-        <h4>Plan</h4>
+      
+        {% photometry_for_target target %}
+        <h4>Plan observations</h4>
         {% if object.type == 'SIDEREAL' %}
           {% target_plan %}
+          <h4>Moon distance</h4> 
           {% moon_distance object %}
         {% elif target.type == 'NON_SIDEREAL' %}
           <p>Airmass plotting for non-sidereal targets is not currently supported. If you would like to add this functionality, please check out the <a href="https://github.com/TOMToolkit/tom_nonsidereal_airmass" target="_blank">non-sidereal airmass plugin.</a></p>
