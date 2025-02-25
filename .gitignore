@@ -1,4 +1,4 @@
-
+__pycache__/
 .env
 .venv
 env/
@@ -7,7 +7,7 @@ ENV/
 env.bak/
 venv.bak/
 microlensing_tomopm/settings.py
-.idea
+.idea/
 poetry.lock
 .vscode/
 custom_code/
