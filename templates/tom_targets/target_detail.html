@@ -41,17 +41,17 @@
         {{ object.future_observations|length }} upcoming observation{{ object.future_observations|pluralize }}
       </div>
       {% endif %}
-      <a target="_blank" rel="noopener noreferrer" href="https://fink-portal.org/{{ target.name }}">Fink target page</a>
-      <br>
-      <a target="_blank" rel="noopener noreferrer" href="https://antares.noirlab.edu/loci/lookup/{{ target.name }}">ANTARES target page</a>
-      <br>
-      <a target="_blank" rel="noopener noreferrer" href="https://lasair-ztf.lsst.ac.uk/objects/{{ target.name }}">Lasair target page</a>
-      <br>
-      <a target="_blank" rel="noopener noreferrer" href="https://alerce.online/object/{{ target.name }}">ALeRCE target page</a>
-      <br>
+    
      
       {% target_unknown_statuses object %}
       {% target_buttons object %}
+      <br>
+      <a target="_blank" rel="noopener noreferrer" href="https://fink-portal.org/{{ target.name }}">Fink </a> 
+      <a target="_blank" rel="noopener noreferrer" href="https://antares.noirlab.edu/loci/lookup/{{ target.name }}">ANTARES </a>
+      <br>
+      <a target="_blank" rel="noopener noreferrer" href="https://lasair-ztf.lsst.ac.uk/objects/{{ target.name }}">Lasair</a>
+      <a target="_blank" rel="noopener noreferrer" href="https://alerce.online/object/{{ target.name }}">ALeRCE</a>
+      <br>
       {% target_data object %}
       {% recent_photometry object limit=3 %}
       {% if object.type == 'SIDEREAL' %}

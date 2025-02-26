@@ -266,15 +266,15 @@ SINGLE_TARGET_DATA_SERVICES = {
 DATA_PRODUCT_TYPES = {
     'photometry': ('photometry', 'Photometry'),
     'atlas_photometry': ('atlas_photometry', 'Atlas Photometry'),
-#    'fits_file': ('fits_file', 'FITS File'),
     'spectroscopy': ('spectroscopy', 'Spectroscopy'),
-#    'image_file': ('image_file', 'Image File')
+    'classification': ('classification', 'Classification'),
 }
 
 DATA_PROCESSORS = {
     'photometry': 'tom_dataproducts.processors.photometry_processor.PhotometryProcessor',
     'spectroscopy': 'tom_dataproducts.processors.spectroscopy_processor.SpectroscopyProcessor',
     'atlas_photometry': 'tom_dataproducts.processors.atlas_processor.AtlasProcessor',
+    'classification': '.processors.classification_processor.ClassificationProcessor',
 }
 
 TOM_FACILITY_CLASSES = [
@@ -300,7 +300,7 @@ ALERT_STREAMS = [
             'USERNAME': os.getenv('FINK_CREDENTIAL_USERNAME', 'set FINK_CREDENTIAL_USERNAME value in environment'),
             'GROUP_ID': os.getenv('FINK_CREDENTIAL_GROUP_ID', 'set FINK_CREDENTIAL_GROUP_ID value in environment'),
             'TOPIC': os.getenv('FINK_TOPIC', 'set FINK_TOPIC value in environment'),
-            'MAX_POLL_NUMBER': os.getenv("FINK_MAX_POLL_NUMBER", 1e10),
+            'MAX_POLL_NUMBER': os.getenv("FINK_MAX_POLL_NUMBER", 2),
             'TIMEOUT': os.getenv('FINK_TIMEOUT', 10),
             'TOPIC_HANDLERS': {
                 'fink.stream': 'tom_fink.alertstream.alert_logger',

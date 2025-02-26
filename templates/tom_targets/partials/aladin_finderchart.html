@@ -62,7 +62,7 @@
     });
 
     function getScaleBarFromForm() {
-      let size = Number($('#scale-bar-size').val());
+      let size = Number($('#scale-bar-size').val())/4;
       if (size < 0) {
         size = 0;
       }
@@ -73,7 +73,7 @@
     }
 
     function getFovAsDegreesFromForm() {
-      const fov = Number($('#fov').val());
+      const fov = Number($('#fov').val())/4;
       const units = $('#fov-units-select option:selected').val();
       let fovAsDegrees;
       if (fov >= 0) {
