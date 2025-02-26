@@ -288,7 +288,7 @@ TOM_ALERT_CLASSES = [
     #  'tom_alerts.brokers.antares.ANTARESBroker',
     'tom_alerts.brokers.lasair.LasairBroker',
     'tom_alerts.brokers.tns.TNSBroker',
-    'tom_alerts.brokers.fink.FinkBroker',
+    'tom_fink.fink.FinkBroker'
 ]
 
 ALERT_STREAMS = [
@@ -385,7 +385,7 @@ REST_FRAMEWORK = {
 
 # Default Plotly theme setting, can set to any valid theme:
 # 'plotly', 'plotly_white', 'plotly_dark', 'ggplot2', 'seaborn', 'simple_white', 'none'
-PLOTLY_THEME = 'plotly_dark'
+PLOTLY_THEME = 'ggplot2'
 
 try:
     from local_settings import * # noqa
