@@ -1,5 +1,5 @@
 {% extends 'tom_common/base.html' %}
-{% load comments bootstrap4 tom_common_extras targets_extras observation_extras dataproduct_extras static cache %}
+{% load comments bootstrap4 tom_common_extras targets_extras observation_extras dataproduct_extras custom_extras static cache %}
 {% block title %}Target {{ object.name }}{% endblock %}
 {% block additional_css %}
 <link rel="stylesheet" href="{% static 'tom_targets/css/main.css' %}">
@@ -74,6 +74,9 @@
       <li class="nav-item">
         <a class="nav-link" id="spectroscopy-tab" href="#spectroscopy" role="tab" data-toggle="tab">Spectroscopy</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" id="classification-tab" href="#classification" role="tab" data-toggle="tab">Classification</a>
+      </li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="observe">
@@ -114,6 +117,9 @@
         </div>
       <div class="tab-pane" id="spectroscopy">
         {% spectroscopy_for_target target %}
+      </div>
+      <div class="tab-pane" id="classification">
+        {% recent_classification object num_points=3 %}
       </div>
 
       {% comments_enabled as comments_are_enabled %}
