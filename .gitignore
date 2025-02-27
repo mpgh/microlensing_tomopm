@@ -10,7 +10,8 @@ microlensing_tomopm/settings.py
 .idea/
 poetry.lock
 .vscode/
-custom_code/
+custom_code/__pycache__/
+custom_code/migrations/
 data/
 dist/
 microlensing_tomopm/__pycache__/
