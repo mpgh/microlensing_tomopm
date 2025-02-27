@@ -30,10 +30,13 @@ class MicrolensingTarget(BaseTarget):
     metallicity = models.FloatField(default=0)
     ruwe = models.FloatField(default=0)
     broker_priority = models.FloatField(default=0)
-
-
-
-
+    lasair_classification = models.CharField(max_length=120, default='', null=True, blank=True)
+    alerce_classification = models.CharField(max_length=120, default='', null=True, blank=True)
+    alerce_classification_probability = models.CharField(default=0)
+    fink_classification = models.CharField(max_length=120, default='', null=True, blank=True)
+    fink_classification_probability = models.CharField(default=0)
+    
+    ruwe = models.FloatField(default=0)
     class Meta:
          verbose_name = "target"
          permissions = (
