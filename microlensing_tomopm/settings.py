@@ -285,7 +285,7 @@ TOM_FACILITY_CLASSES = [
  
 TOM_ALERT_CLASSES = [
     'tom_alerts.brokers.alerce.ALeRCEBroker',
-    #  'tom_alerts.brokers.antares.ANTARESBroker',
+    #'tom_alerts.brokers.antares.ANTARESBroker',
     'tom_alerts.brokers.lasair.LasairBroker',
     'tom_alerts.brokers.tns.TNSBroker',
     'tom_fink.fink.FinkBroker'
@@ -300,7 +300,7 @@ ALERT_STREAMS = [
             'USERNAME': os.getenv('FINK_CREDENTIAL_USERNAME', 'set FINK_CREDENTIAL_USERNAME value in environment'),
             'GROUP_ID': os.getenv('FINK_CREDENTIAL_GROUP_ID', 'set FINK_CREDENTIAL_GROUP_ID value in environment'),
             'TOPIC': os.getenv('FINK_TOPIC', 'set FINK_TOPIC value in environment'),
-            'MAX_POLL_NUMBER': os.getenv("FINK_MAX_POLL_NUMBER", 2),
+            'MAX_POLL_NUMBER': os.getenv("FINK_MAX_POLL_NUMBER", 100),
             'TIMEOUT': os.getenv('FINK_TIMEOUT', 10),
             'TOPIC_HANDLERS': {
                 'fink.stream': 'tom_fink.alertstream.alert_logger',

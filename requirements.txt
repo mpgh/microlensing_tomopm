@@ -112,7 +112,7 @@ threadpoolctl==3.5.0
 tom-alertstreams==1.0.2
 tom-fink==0.7.4
 toml==0.10.2
-tomtoolkit==2.22.5
+tomtoolkit==2.24
 tqdm==4.67.1
 typing_extensions==4.12.2
 tzdata==2025.1
