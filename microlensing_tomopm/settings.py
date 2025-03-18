@@ -64,7 +64,17 @@ INSTALLED_APPS = [
     'tom_alertstreams',
     'tom_setup',
     'tom_fink',
+    'tom_registration'
 ]
+
+TOM_REGISTRATION = {
+    'REGISTRATION_AUTHENTICATION_BACKEND': 'django.contrib.auth.backends.ModelBackend',
+    'REGISTRATION_REDIRECT_PATTERN': 'home',
+    'REGISTRATION_STRATEGY': 'approval_required',  # ['open', 'approval_required']
+    'SEND_APPROVAL_EMAILS': False,  # Optional email behavior if `REGISTRATION_STRATEGY = 'approval_required'`, default is False
+    'APPROVAL_SUBJECT': f'Your {TOM_NAME} registration has been approved!',  # Optional subject line of approval email, (Default Shown)
+    'APPROVAL_MESSAGE': f'Your {TOM_NAME} registration has been approved. You can log in ...'  # Optional html-enabled body for approval email, (Default Shown)
+}
 
 SITE_ID = 1
 
