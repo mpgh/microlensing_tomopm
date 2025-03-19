@@ -14,7 +14,14 @@ For customization instructions, see tom_common/base.html
         <a class="dropdown-item" href="{% url 'targets:targetgrouping' %}">Target Grouping</a>
     </div>
 </li>
+
 {% navbar_app_addons %}
+<li class="nav-item {% if request.resolver_match.namespace == 'priority_manager' %}active{% endif %}">
+    <a class="nav-link" href="/priority_management">Priorities</a>
+</li>
+
+
 <li class="nav-item {% if 'user' in request.resolver_match.url_name %}active{% endif %}">
     <a class="nav-link" href="{% url 'user-list' %}">Users</a>
 </li>
+

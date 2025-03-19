@@ -284,7 +284,7 @@ DATA_PROCESSORS = {
     'photometry': 'tom_dataproducts.processors.photometry_processor.PhotometryProcessor',
     'spectroscopy': 'tom_dataproducts.processors.spectroscopy_processor.SpectroscopyProcessor',
     'atlas_photometry': 'tom_dataproducts.processors.atlas_processor.AtlasProcessor',
-    'classification': '.processors.classification_processor.ClassificationProcessor',
+    'classification': 'processors.classification_processor.ClassificationProcessor',
 }
 
 TOM_FACILITY_CLASSES = [

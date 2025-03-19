@@ -1,0 +1,18 @@
+{% extends 'tom_common/base.html' %}
+
+{% block title %}
+    Priority Normalization and Ranking
+{% endblock %}
+
+{% block content %}
+<h3>Priority Normalization and Ranking</h3>
+<p> This page should show the current renormalization stage. Respective scales and histograms will be 
+populated if suitable targets and information is accessible
+
+<ul>
+    {% for target in targets %}
+    <li>{{ target.name}}  {{ target.classification}}</li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
