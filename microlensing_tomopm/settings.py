@@ -64,7 +64,8 @@ INSTALLED_APPS = [
     'tom_alertstreams',
     'tom_setup',
     'tom_fink',
-    'tom_registration'
+    'tom_registration',
+    'tom_classifications'
 ]
 
 TOM_REGISTRATION = {
