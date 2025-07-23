@@ -396,7 +396,7 @@ REST_FRAMEWORK = {
 
 # Default Plotly theme setting, can set to any valid theme:
 # 'plotly', 'plotly_white', 'plotly_dark', 'ggplot2', 'seaborn', 'simple_white', 'none'
-PLOTLY_THEME = 'ggplot2'
+PLOTLY_THEME = 'plotly'
 
 try:
     from local_settings import * # noqa
